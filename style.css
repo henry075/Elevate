@@ -228,6 +228,48 @@ main p {
     margin-right: 0.8rem;
 }
 
+.main-image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Optional: Additional styling */
+h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+
+.card-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.card p {
+    padding: 0 15px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.card-btn a {
+    color: white;
+    text-decoration: none;
+}
 /* Card Layout Styles */
 .cards {
     display: flex;
@@ -299,11 +341,15 @@ main p {
 
 @media only screen and (max-width: 768px) {
     .card {
-        width: 100%; /* 1 card per row on small devices */
-        margin: 1rem 0;
+        width: calc(70% - 20px); /* Adjust width for 2 columns */
     }
 }
 
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Full width for single column */
+    }
+}
 /* Footer Styles */
 .footer {
     background-color: #0044cc; /* Blue background */
