@@ -122,7 +122,7 @@ a {
 }
 
 main {
-    padding: 7rem 10%; /* Added horizontal padding to center text and align with images */
+    padding: 5rem 10%; /* Added horizontal padding to center text and align with images */
     font-size: 1.6rem; /* Default font size for main content */
     flex: 1; /* Allow main content to grow and take up available space */
     margin: 0 auto; /* Center the content horizontally */
@@ -317,20 +317,23 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
-    padding: 50px;
+    gap: 1.5rem; /* Increase gap between images */
 }
 
 .imga img {
-    flex: 0 1 40%; /* Default to 80% width on large screens */
+    flex: 0 1 50%; /* Default to 50% width for larger images */
     max-width: 100%; /* Ensure images do not exceed container width */
     height: auto; /* Maintain aspect ratio */
 }
 
 @media (min-width: 768px) {
     .imga img {
-        flex: 0 1 100%; /* Full width on small screens */
+        flex: 0 1 80%; /* Smaller width for medium screens */
     }
+    main {
+        padding: 2rem 5%; /* Adjust padding for small screens */
+    }
+    
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
