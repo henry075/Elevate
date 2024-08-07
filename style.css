@@ -49,7 +49,7 @@ a {
 .img {
     display: flex;
     align-items: center;
-    margin-right: 1rem; /* Adjust spacing between img and nav-logo */
+    margin-right: 0.5rem; /* Adjust spacing between img and nav-logo */
 }
 
 .hamburger {
@@ -90,10 +90,7 @@ a {
     font-size: 3rem;
     font-weight: 500;
     color: black;
-}
-
-.search-icon {
-    margin-left: 5rem; /* Ensure alignment with nav items */
+    margin-left: 0.5rem; /* Adjust spacing between img and nav-logo */
 }
 
 /* Dropdown Menu Styles */
@@ -124,96 +121,27 @@ a {
     display: block; /* Show dropdown menu on hover */
 }
 
-@media only screen and (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 7rem;
-        flex-direction: column;
-        align-items: flex-start; /* Align items to the left */
-        padding-left: 4rem; /* Add padding to the left */
-        background-color: rgb(255, 252, 248);
-        width: 100%;
-        border-radius: 5px;
-        text-align: left; /* Set text alignment to the left */
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-    }
-
-    .nav-link {
-        font-size: 1.6rem; /* Reduced font size for nav links */
-        color: black;
-    }
-
-    .nav-logo {
-        font-size: 2.5rem; /* Reduced font size for nav logo */
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-item {
-        margin: 2.5rem 0;
-    }
-
-    .dropdown-menu {
-        position: static; /* Static positioning for mobile view */
-        width: 100%; /* Full width for mobile view */
-        box-shadow: none; /* Remove box shadow */
-        padding-left: 1rem; /* Adjust padding for mobile view */
-    }
-
-    .dropdown-menu .dropdown-link {
-        padding: 1rem 2rem; /* Adjust padding for mobile view */
-    }
-
-    .search-icon {
-        margin-left: 0; /* Remove margin for mobile view */
-        order: 1; /* Move search icon to the top */
-    }
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-item:hover .dropdown-menu {
-        display: none; /* Hide dropdown menu on hover */
-    }
-
-    .dropdown.active .dropdown-menu {
-        display: block; /* Show dropdown menu when active class is added */
-    }
-}
-
-/* Main Content Styles */
 main {
-    padding: 2rem;
+    padding: 7rem 10%; /* Added horizontal padding to center text and align with images */
     font-size: 1.6rem; /* Default font size for main content */
     flex: 1; /* Allow main content to grow and take up available space */
+    margin: 0 auto; /* Center the content horizontally */
 }
 
+/* Heading Styles */
 main h1 {
     font-size: 2.4rem; /* Font size for main headings */
+    margin-bottom: 1.6rem;
+    text-align: center; /* Center align the headings */
 }
 
+/* Paragraph Styles */
 main p {
     font-size: 1.8rem; /* Font size for paragraphs */
     margin-bottom: 1.6rem; /* Add margin to space out paragraphs */
+    text-align: justify; /* Justify text for better readability */
 }
+
 
 /* Social Media Icon Styles */
 .social-icon {
@@ -332,24 +260,6 @@ h1 {
     transform: translateX(5px); /* Move the arrow to the right */
 }
 
-/* Responsive Card Layout */
-@media only screen and (max-width: 992px) {
-    .card {
-        width: 45%; /* 2 cards per row on medium devices */
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .card {
-        width: calc(70% - 20px); /* Adjust width for 2 columns */
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        width: 100%; /* Full width for single column */
-    }
-}
 /* Footer Styles */
 .footer {
     background-color: #0044cc; /* Blue background */
@@ -373,3 +283,153 @@ h1 {
     color: white;
     margin: 0 1rem;
 }
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Center the icons vertically */
+    gap: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 2em;
+    display: inline-block;
+}
+
+.social-icons .instagram {
+    color: #E1306C; /* Instagram color */
+}
+
+.social-icons .whatsapp {
+    color: #25D366; /* WhatsApp color */
+}
+
+.social-icons .facebook {
+    color: #1877F2; /* Facebook color */
+}
+
+.social-icons .twitter {
+    color: #1DA1F2; /* Twitter color */
+}
+
+.imga {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 50px;
+}
+
+.imga img {
+    flex: 0 1 40%; /* Default to 80% width on large screens */
+    max-width: 100%; /* Ensure images do not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (min-width: 768px) {
+    .imga img {
+        flex: 0 1 100%; /* Full width on small screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card {
+        width: calc(50% - 1.5rem); /* Two cards per row with gap */
+    }
+}
+
+@media (min-width: 1024px) {
+    .imga img {
+        flex: 0 1 40%; /* Reduce image width to 60% on larger screens */
+    }
+    .card {
+        width: calc(33.% - 1.5rem); /* Three cards per row with gap */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 7rem;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        padding-left: 4rem; /* Add padding to the left */
+        background-color: rgb(255, 252, 248);
+        width: 100%;
+        border-radius: 5px;
+        text-align: left; /* Set text alignment to the left */
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-link {
+        font-size: 1.6rem; /* Reduced font size for nav links */
+        color: black;
+    }
+
+    .nav-logo {
+        font-size: 2.5rem; /* Reduced font size for nav logo */
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .dropdown-menu {
+        position: static; /* Static positioning for mobile view */
+        width: 100%; /* Full width for mobile view */
+        box-shadow: none; /* Remove box shadow */
+        padding-left: 1rem; /* Adjust padding for mobile view */
+    }
+
+    .dropdown-menu .dropdown-link {
+        padding: 1rem 2rem; /* Adjust padding for mobile view */
+    }
+
+    .search-icon {
+        margin-left: 0; /* Remove margin for mobile view */
+        order: 1; /* Move search icon to the top */
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-item:hover .dropdown-menu {
+        display: none; /* Hide dropdown menu on hover */
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block; /* Show dropdown menu when active class is added */
+    }
+    .cards {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center cards */
+    }
+
+    .card {
+        width: 90%; /* Make cards fit within the container */
+        max-width: none; /* Remove max-width constraint */
+        margin: 1rem 0; /* Add margin between stacked cards */
+    }
+}
+
