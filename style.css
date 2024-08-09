@@ -32,7 +32,8 @@ a {
 /* Header and Navbar Styles */
 .header {
     border-bottom: 1px solid #E2E8F0;
-    background-color: rgb(245, 242, 237);
+    background-color: white; /* Keeping the white background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     position: sticky;
     top: 0;
     width: 100%;
@@ -44,6 +45,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 2.5rem 1.5rem;
+    background-color: #f8f9fa; /* Add a light gray background to navbar */
 }
 
 .img {
@@ -92,6 +94,7 @@ a {
     color: black;
     margin-left: 0.5rem; /* Adjust spacing between img and nav-logo */
 }
+
 
 /* Dropdown Menu Styles */
 .dropdown-menu {
@@ -305,13 +308,14 @@ h1 {
     color: #25D366; /* WhatsApp color */
 }
 
-.social-icons .facebook {
-    color: #1877F2; /* Facebook color */
+.social-icons .twitter {
+    color: rgba(26, 125, 238, 0.678); /* X logo color */
 }
 
-.social-icons .twitter {
-    color: #1DA1F2; /* Twitter color */
+.social-icons .youtube {
+    color: #FF0000; /* YouTube color */
 }
+
 
 .imga {
     display: flex;
