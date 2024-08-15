@@ -17,3 +17,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+let currentIndex = 0;
+
+function moveSlide(direction) {
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+        currentIndex = totalItems - 1;
+    } else if (currentIndex >= totalItems) {
+        currentIndex = 0;
+    }
+
+    document.querySelector('.carousel-inner').style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Optional: Auto-slide every 5 seconds
+setInterval(() => moveSlide(1), 5000);
